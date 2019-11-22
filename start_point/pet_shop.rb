@@ -34,22 +34,22 @@ def stock_count(pet_shop)
 end
 
 # 8
-def pets_by_breed(pet_shop, cat_breed)
+def pets_by_breed(pet_shop, pet_breed)
   count = []
   for pet in pet_shop[:pets]
-    if pet[:breed] == cat_breed
-      count << "animal"
+    if pet[:breed] == pet_breed
+      count << 1
     end
   end
   return count
 end
 
 # 9
-# def pets_by_breed(pet_shop, cat_breed)
+# def pets_by_breed(pet_shop, pet_breed)
 #   count = []
 #   for pet in pet_shop[:pets]
-#     if pet[:breed] == cat_breed
-#       count << "animal"
+#     if pet[:breed] == pet_breed
+#       count << 1
 #     end
 #   end
 #   return count
@@ -57,6 +57,19 @@ end
 
 # 10
 
-def find_pet_by_name(pet_name, animal)
-  return
+def find_pet_by_name(pet_shop, animal_name)
+  for pet in pet_shop[:pets]
+    if pet[:name] == animal_name
+      return pet
+    end
+  end
+end
+
+def find_pet_by_name(pet_shop, animal_name)
+  for pet in pet_shop[:pets]
+    if pet[:name] == animal_name
+      return pet
+    end
+  end
+  return nil
 end
