@@ -73,3 +73,7 @@ def find_pet_by_name(pet_shop, animal_name)
   end
   return nil
 end
+
+def remove_pet_by_name(pet_shop, animal_name)
+  for pet in pet_shop
+end
