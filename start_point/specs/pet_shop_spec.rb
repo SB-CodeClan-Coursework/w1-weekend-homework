@@ -1,3 +1,4 @@
+require('pry')
 require('minitest/autorun')
 require('minitest/reporters')
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
@@ -81,6 +82,7 @@ class TestPetShop < Minitest::Test
   end
 
   def test_pet_shop_name
+      binding.pry
     name = pet_shop_name(@pet_shop)
     assert_equal("Camelot of Pets", name)
   end
